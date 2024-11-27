@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Video Alert System</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="notificationHandler.js"></script>
+</head>
+<body>
+
+<div class="main-container">
+	<div class="header-container">
+  	<div class="top-buttons">
+    	<button class="top-button" onclick="resetSite()">Reset Site
+      	<span class="tooltip">Click to clear all txt files and reset incident counters.</span>
+    	</button>
+    	<button class="top-button" onclick="triggerRefresh()">Refresh Backend
+      	<span class="tooltip">Click to refresh Glicth.com backend to reflect txt changes.</span>
+    	</button>
+  	</div>
+	</div>
+	<div class="video-container">
+    	<div class="box" id="videoBox1">
+        	<img id="videoBox1Video" style="width: 100%; height: 100%;" autoplay>
+    	</div>
+    	<div class="box" id="videoBox2">
+        	<img id="videoBox2Video" style="width: 100%; height: 100%;" autoplay>
+    	</div>
+	</div>
+	<div class="video-container">
+    	<button class="resolved-button" onclick="resolveAlert('videoBox1')">Resolved</button>
+    	<button class="resolved-button" onclick="resolveAlert('videoBox2')">Resolved</button>
+	</div>
+	<div class="video-container">
+  	<button class="secondary-button" onclick="openFile('CAM1Report.txt')">CAM1FILE</button>
+  	<button class="secondary-button" onclick="openFile('CAM2Report.txt')">CAM2FILE</button>
+	</div>
+	<div class="center-container">
+  	<button class="loadreport-button" onclick="openFile('incidents.txt')">Load Report</button>
+	</div>
+</div>
+
+</body>
+</html>
+
+
