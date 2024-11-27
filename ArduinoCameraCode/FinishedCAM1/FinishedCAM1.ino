@@ -1,8 +1,11 @@
+/*IMPORTANT NOTE: This code can function for other cameras, however, the camera/board module MUST have PSRAM. 
+If the camera/board module does not have PSRAM, the camera will not be able to initialize.*/
+
 #include "esp_camera.h"
 #include <WiFi.h>
 #include <WebSocketsClient.h>
 
-// Camera model
+// Camera model -> Using ESP32 CAM
 #define CAMERA_MODEL_AI_THINKER
 #define PWDN_GPIO_NUM    32
 #define RESET_GPIO_NUM   -1
@@ -26,6 +29,7 @@ const char* ssid = "enter-your-hotspot-name"; // Enter correct credentials
 const char* password = "enter-your-hotspot-password";
 const char* webSocketServer = "enter-your-websocket-server";// Enter correct WebSocket server
 
+//Create WebSocketClient
 WebSocketsClient webSocket;
 
 int identifier = 1; //Camera 2 identifier
