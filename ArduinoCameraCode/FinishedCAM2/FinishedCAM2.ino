@@ -1,3 +1,9 @@
+/*IMPORTANT NOTE: This code can function for other cameras, however, the camera/board module MUST have PSRAM. 
+If the camera/board module does not have PSRAM, the camera will not be able to initialize.
+Additinally, hotspot credentials must be modified in order to connect to your device at lines 29-30.
+WebSocket server should also be changed to reflect correct server.*/
+
+
 #include "esp_camera.h"
 #include <WiFi.h>
 #include <WebSocketsClient.h>
