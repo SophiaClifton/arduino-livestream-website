@@ -8,7 +8,7 @@ WebSocket server should also be changed to reflect correct server.*/
 #include <WiFi.h>
 #include <WebSocketsClient.h>
 
-// Camera model
+// Camera model -> ESP32 Cam
 #define CAMERA_MODEL_AI_THINKER
 #define PWDN_GPIO_NUM    32
 #define RESET_GPIO_NUM   -1
