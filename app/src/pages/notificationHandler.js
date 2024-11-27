@@ -6,12 +6,10 @@ const isPlaying = { videoBox1: false, videoBox2: false };
 const incidentTimes = { videoBox1: 0, videoBox2: 0 }; // To store the time of the incident
 let CAM1active = false; //incident being recorded on CAM1
 let CAM2active = false; //incident being recorded on CAM2
-
 const incidentCounters = { 
   videoBox1: parseInt(localStorage.getItem('incidentCounterVideoBox1')) || 0,
   videoBox2: parseInt(localStorage.getItem('incidentCounterVideoBox2')) || 0 
 };
-
 //to ensure the total incidents remain consistent across page refreshes
 function updateLocalStorage() { 
   localStorage.setItem('incidentCounterVideoBox1', incidentCounters.videoBox1); 
@@ -157,7 +155,6 @@ function triggerRefresh() {
         console.error('Error triggering refresh:', error);
     });
 }
-
 //reset incident counters and clear report/incident files
 function resetSite() {
 	localStorage.setItem('incidentCounterVideoBox1', 0);
@@ -179,11 +176,8 @@ function resetSite() {
 	});
  
 }
-
 //open respective report in new tab
 function openFile(fileName) { 
     const fileURL = fileName;
     window.open(fileURL, '_blank'); 
 }
-
-
