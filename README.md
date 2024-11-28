@@ -12,7 +12,8 @@ This project showcases a live streaming security camera system utilizing Arduino
 
 ## Demonstration
 
-Video!
+[Watch the demo](https://drive.google.com/file/d/1BI0tvqngzngjxmdOntWZob5yguw-fgW1/view?usp=sharing)
+
 
 ## Arduino Setup
 
